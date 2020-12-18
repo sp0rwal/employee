@@ -1,0 +1,6 @@
+Install json sever
+npm install -g json-server
+•create db.json file which will conatain data
+•start the json-server
+
+json-server --watch db.json
