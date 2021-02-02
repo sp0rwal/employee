@@ -1,0 +1,13 @@
+table {
+    width: 100%;
+  }
+  .button {
+    display: flex;
+   font-size: large;
+    
+    justify-content: flex-end;
+  }
+
+  .material-icons:hover {
+    cursor: pointer;
+ }

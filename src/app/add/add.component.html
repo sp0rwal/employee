@@ -1,0 +1,85 @@
+<!-- <mat-card>
+    <mat-card-title>Add Employee</mat-card-title>
+<mat-card-content>
+
+
+<table mat-table>
+    
+</table>
+   <div>  
+    <form [formGroup]="employeeForm" (ngSubmit)="addEmployee()">
+     
+        <p>
+            <mat-form-field>
+              <input type="number" matInput placeholder="id" formControlName="id">
+              <p style="color: red;" *ngIf="hasError('id','required')"> id required</p>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field>
+              <input type="text" matInput placeholder="Name" formControlName="name">
+              <p style="color: red;" *ngIf="hasError('name','required')"> name required</p>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field>
+              <input type="text" matInput placeholder="Title" formControlName="title">
+              <p style="color: red;" *ngIf="hasError('title','required')"> Title required</p>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field>
+              <input type="text" matInput placeholder="Department" formControlName="dept">
+              <p style="color: red;" *ngIf="hasError('dept','required')"> Department required</p>
+            </mat-form-field>
+          </p>
+           
+          <div class="button">
+            <button type="submit" mat-button>Submit</button>
+          </div>
+    </form>
+</div>  
+    
+</mat-card-content>
+</mat-card>-->
+
+
+    
+
+    
+ <mat-card class="my-card">
+    <mat-card-title>Add Employee</mat-card-title>
+    <mat-card-content>
+        <form class="my-form"  [formGroup]="employeeForm" (ngSubmit)="addEmployee()">
+          
+            <mat-form-field class="full-width">
+                  <mat-label>Id</mat-label>
+                  
+                  <input type="number" matInput placeholder="id" formControlName="id" required>
+                  <p style="color: red;" *ngIf="hasError('id','required')"> id required</p>
+               </mat-form-field>
+
+               <mat-form-field class="full-width">
+                  <mat-label>Name</mat-label>
+                  <input type="text" matInput placeholder="Name" formControlName="name" required>
+                  <p style="color: red;" *ngIf="hasError('name','required')"> name required</p>
+               </mat-form-field>
+
+               <mat-form-field class="full-width">
+                  <mat-label>Title</mat-label>
+                  <input type="text" matInput placeholder="Title" formControlName="title" required > 
+                  <p style="color: red;" *ngIf="hasError('title','required')"> Title required</p>
+               </mat-form-field>
+
+               <mat-form-field class="full-width">
+                  <mat-label>Deparment</mat-label>
+                  <input type="text" matInput placeholder="Department" formControlName="dept" required>
+                  <p style="color: red;" *ngIf="hasError('dept','required')"> department required</p>
+               </mat-form-field>
+              
+        </form>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button (click)="addEmployee()" color="primary">submit</button>
+      </mat-card-actions>
+ </mat-card>

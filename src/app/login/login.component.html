@@ -1,0 +1,53 @@
+<!--
+<form [formGroup]="loginForm">
+  
+<table>
+    <tr><td>
+        User Id :
+    </td>
+    <td>
+        <input type="text"  formControlName="userid">
+    </td></tr>
+    <tr><td>
+        Password :
+    </td>
+    <td>
+        <input type="password" formControlName="password">
+    </td></tr>
+    <tr><td>
+<button (click)="login()">Login</button>
+    </td>
+    <td>
+        
+    </td></tr>
+
+</table>
+
+</form>-->
+<mat-card>
+    <mat-card-title>Login</mat-card-title>
+<mat-card-content>
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+  <p>
+    <mat-form-field>
+      <input type="text" matInput placeholder="Username" formControlName="username"  required>
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field>
+      <input type="password" matInput placeholder="Password" formControlName="password" required>
+    </mat-form-field>
+  </p>
+
+  <p *ngIf="error" class="error">
+    {{ error }}
+  </p>
+
+  <div class="button">
+    <button type="submit" mat-button>Login</button>
+  </div>
+
+</form>
+</mat-card-content>
+</mat-card>
